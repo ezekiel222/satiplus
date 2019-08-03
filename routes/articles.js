@@ -50,10 +50,11 @@ router.post('/new', function(req,res){
   res.json(data)
 });
 
-router.get('/:id', function(req, res){
+router.get('/:id', async (req, res) => {
+  let articles1 = await Articles.find().sort({updatedAt: 'desc'}).limit(6)
   const id = req.params.id;
   Articles.findById(id).then(data => {
-    res.render('articles/show', {article:data})
+    res.render('articles/show', {article:data, articles1:articles1})
   });
 });
 

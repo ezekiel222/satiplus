@@ -3,11 +3,12 @@ var router = express.Router();
 const Articles = require('../models/Article')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/', async(req, res, next) => {
   const query = req.query;
+  let destacados = await Articles.find({destacado:true}).sort({updatedAt: 'desc'}).limit(5)
   Articles.find(query).sort({updatedAt: 'desc'}).limit(6)
   .then(data =>{
-    res.render('index', {articles:data})
+    res.render('index', {articles:data, destacados:destacados})
   })
   .catch(err => {
     res.json({

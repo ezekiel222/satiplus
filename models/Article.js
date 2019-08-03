@@ -26,7 +26,6 @@ const Article = new mongoose.Schema({
   subtitle7 : {type:String, trim:true},
   content7 : {type:String},
   photo7: {type:String, trim:true},
-  video : {type:String, trim:true},
   fuente : {type:String, trim:true},
 
 },{timestamps: true});
