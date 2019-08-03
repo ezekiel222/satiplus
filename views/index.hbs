@@ -1,0 +1,94 @@
+<div class="search">
+  <form class="form-inline md-form form-sm mt-0 mb-3" action="/articles/search" method="post">
+    <i class="fas fa-search mt-2" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75 mt-2" type="text" placeholder="Buscar"
+      aria-label="Search" name="search" value="{{sear}}">
+  </form>
+</div>
+<!--Start code-->
+            <!--Start box news-->
+            <div class="col-12 col-md-12 pt-2 mb-3 mb-lg-4">
+              <div class="col-12">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+<ol class="carousel-indicators">
+<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner">
+<div class="carousel-item active">
+  <div class="card border-0 rounded-0 text-light overflow zoom">
+    <div class="postion-relative">
+      <div class="ratio_left-cover-1 image-wrapper">
+        <img class="d-block w-100 overflow-hidden" src="https://cdn.pixabay.com/photo/2019/07/22/07/37/hemp-4354387_960_720.jpg" alt="First slide">
+      </div>
+        <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+          <h2>Titulo</h2>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded-0 text-light overflow zoom">
+  <div class="postion-relative">
+    <div class="ratio_left-cover-1 image-wrapper">
+      <img class="d-block w-100 overflow-hidden" src="https://cdn.pixabay.com/photo/2019/07/22/07/37/hemp-4354387_960_720.jpg" alt="First slide">
+    </div>
+      <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+        <h2>Titulo adsfsdfs</h2>
+      </div>
+  </div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card border-0 rounded-0 text-light overflow zoom">
+<div class="postion-relative">
+  <div class="ratio_left-cover-1 image-wrapper">
+    <img class="d-block w-100 overflow-hidden" src="https://cdn.pixabay.com/photo/2019/07/22/07/37/hemp-4354387_960_720.jpg" alt="First slide">
+  </div>
+    <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+      <h2>Titulo< 12321321312312312 </h2>
+    </div>
+</div>
+</div>
+</div>
+<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+<span class="carousel-control-next-icon" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+              </div>
+                <div class="row">
+                  {{#each articles}}
+                    <!--news box-->
+                    <div class="col-12 col-md-4 pb-1 pt-2 mt-2">
+                        <div class="card border-0 rounded-0 text-white overflow zoom">
+                            <div class="position-relative">
+                                <!--thumbnail img-->
+                                <div class="ratio_right-cover-2 image-wrapper overflow-hidden">
+                                    <a href="articles/{{this.id}}">
+                                        <img class="img-fluid"
+                                             src="{{this.photo}}"
+                                             alt="Image description">
+                                    </a>
+                                </div>
+                                <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                                    <!-- category -->
+
+                                    <!--title-->
+                                    <a href="articles/{{this.id}}">
+                                        <h2 class="h5 text-white my-1">{{this.title}}</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end of news box -->
+                    {{/each}}
+                </div>
+            </div>
+            <!--End box news-->

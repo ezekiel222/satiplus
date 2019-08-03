@@ -1,0 +1,190 @@
+body{
+  font-family: "Montserrat", sans-serif;
+  color: #333;
+}
+p{
+  font-size: 1em;
+  /* text-align: justify; */
+}
+h1{
+  font-weight: 600;
+}
+a{
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: #eac248;
+}
+.contenido{
+  display: none;
+}
+nav a.navbar-brand{
+  margin-left: auto;
+  margin-right: auto;
+}
+p.trunc {
+  /* hide text if it more than N lines  */
+  overflow: hidden;
+  /* for set '...' in absolute position */
+  position: relative;
+  /* use this value to count block height */
+  line-height: 1.2em;
+  /* max-height = line-height (1.2) * lines max number (3) */
+  max-height: 3.6em;
+  /* fix problem when last visible word doesn't adjoin right side  */
+  text-align: justify;
+  /* place for '...' */
+  margin-right: -1em;
+  padding-right: 1em;
+  max-width : 60%;
+}
+/* create the ... */
+p.trunc:before {
+  /* points in the end */
+  content: '...';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of block */
+  right: 0;
+  bottom: 0;
+}
+/* hide ... if we have text, which is less than or equal to max lines */
+p.trunc:after {
+  /* points in the end */
+  content: '';
+  /* absolute position */
+  position: absolute;
+  /* set position to right bottom corner of text */
+  right: 0;
+  /* set width and height */
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  /* bg color = bg color under block */
+  background: white;
+}
+.articles{
+  margin-left: 2%;
+  padding: 2%;
+  width: 800px;
+  max-width: 97%;
+}
+article{
+  max-height: 150px;
+}
+.articles a.titulo h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+p.seguir{
+  margin-top: -10px;
+}
+p.seguir a{
+  color: gray;
+}
+p.seguir a:hover{
+  color: #eac248;
+}
+.article{
+  margin-top: 2rem;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 900px;
+  max-width: 96%;
+  line-height: 30px;
+}
+.article h1{
+  margin-bottom: 20px;
+}
+.article h2{
+  margin-top: 40px;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.article p{
+  font-size: 1.3rem;
+  text-align: justify;
+}
+nav{
+  background-color: #1c4826;
+}
+.article img{
+  width: 100%;
+}
+form.new{
+  display: inline-block;
+  width: 100%;
+}
+form.new input{
+  width: 100%;
+  padding: 1%;
+}
+form.new textarea{
+  width: 100%;
+  padding: 1%;
+}
+.contenido h6{
+  padding: 2%;
+  background-color: #eac248;
+  width: fit-content;
+}
+.contenido h6:hover{
+  cursor: pointer;
+  background-color:#ffc81f;
+}
+form.new label{
+  margin-top: 1.5rem;
+}
+form.new input.boton{
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #1c4826;
+  color:#ffff;
+}
+form.new input.boton:hover{
+  background-color:#368a49 ;
+}
+.b-0 {
+    bottom: 0;
+}
+.bg-shadow {
+    background: rgba(76, 76, 76, 0);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179, 171, 171, 0)), color-stop(49%, rgba(48, 48, 48, 0.37)), color-stop(100%, rgba(19, 19, 19, 0.8)));
+    background: linear-gradient(to bottom, rgba(179, 171, 171, 0) 0%, rgba(48, 48, 48, 0.71) 49%, rgba(19, 19, 19, 0.8) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+.overflow {
+    position: relative;
+    overflow: hidden;
+}
+.zoom img {
+    transition: all 0.2s linear;
+}
+.zoom:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.carousel-item img{
+  max-height: 450px;
+}
+.search{
+  background-color: #368a49;
+  height: 50px;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+}
+.search i{
+  margin-left: auto;
+  color: #fff;
+}
+.search input{
+  margin-right: auto;
+}
+.empty{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}

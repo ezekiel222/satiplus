@@ -1,0 +1,107 @@
+<div class="search">
+  <form class="form-inline md-form form-sm mt-0 mb-3" action="/articles/search" method="post">
+    <i class="fas fa-search mt-2" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75 mt-2" type="text" placeholder="Buscar"
+      aria-label="Search" name="search" value="{{sear}}">
+  </form>
+</div>
+<div class="article">
+  <h1>{{article.title}}</h1>
+  <img src="{{article.photo}}" alt="">
+  <hr>
+  <h2>{{article.subtitle}}</h2>
+  <p id="p">{{article.content}}</p>
+  <div class="content1">
+    <h2>{{article.subtitle1}}</h2>
+    <img src="{{article.photo1}}" alt="">
+    <hr>
+    <p id="p1">{{article.content1}}</p>
+  </div>
+  <div class="content2">
+    <h2>{{article.subtitle2}}</h2>
+    <img src="{{article.photo2}}" alt="">
+    <hr>
+    <p id="p2">{{article.content2}}</p>
+  </div>
+  <div class="content3">
+    <h2>{{article.subtitle3}}</h2>
+    <img src="{{article.photo3}}" alt="">
+    <hr>
+    <p id="p3">{{article.content3}}</p>
+  </div>
+  <div class="content4">
+    <h2>{{article.subtitle4}}</h2>
+    <img src="{{article.photo4}}" alt="">
+    <hr>
+    <p id="p4">{{article.content4}}</p>
+  </div>
+  <div class="content5">
+    <h2>{{article.subtitle5}}</h2>
+    <img src="{{article.photo5}}" alt="">
+    <hr>
+    <p id="p5">{{article.content5}}</p>
+  </div>
+  <div class="content6">
+    <h2>{{article.subtitle6}}</h2>
+    <img src="{{article.photo6}}" alt="">
+    <hr>
+    <p id="p6">{{article.content6}}</p>
+  </div>
+  <div class="content7">
+    <h2>{{article.subtitle7}}</h2>
+    <img src="{{article.photo7}}" alt="">
+    <hr>
+    <p id="p7">{{article.content7}}</p>
+  </div>
+  <br>
+  <p style="font-size:1rem;">
+    <i>
+      <a href="{{article.fuente}}">{{article.fuente}}</a>
+    </i>
+  </p>
+</div>
+
+<script type="text/javascript">
+   if($('.content1 p')[0].textContent == ""){
+     $('.content1').hide();
+   };
+   if($('.content2 p')[0].textContent == ""){
+     $('.content2').hide();
+   };
+   if($('.content3 p')[0].textContent == ""){
+     $('.content3').hide();
+   };
+   if($('.content4 p')[0].textContent == ""){
+     $('.content4').hide();
+   };
+   if($('.content5 p')[0].textContent == ""){
+     $('.content5').hide();
+   };
+   if($('.content6 p')[0].textContent == ""){
+     $('.content6').hide();
+   };
+   if($('.content7 p')[0].textContent == ""){
+     $('.content7').hide();
+   };
+</script>
+<script type="text/javascript">
+String.prototype.nl2br = function(){return this.replace(/\n/g, "<br />");};
+String.prototype.bold1 = function(){return this.replace(/[|]/g, "<b>");};
+String.prototype.bold2 = function(){return this.replace(/[*]/g, "</b>");};
+var neww = $('p#p').html().bold1().bold2().nl2br();
+$('p#p').html(neww)
+var new1 = $('p#p1').html().bold1().bold2().nl2br();
+$('p#p1').html(new1)
+var new2 = $('p#p2').html().bold1().bold2().nl2br();
+$('p#p2').html(new2)
+var new3 = $('p#p3').html().bold1().bold2().nl2br();
+$('p#p3').html(new3)
+var new4 = $('p#p4').html().bold1().bold2().nl2br();
+$('p#p4').html(new4)
+var new5 = $('p#p5').html().bold1().bold2().nl2br();
+$('p#p5').html(new5)
+var new6 = $('p#p6').html().bold1().bold2().nl2br();
+$('p#p6').html(new6)
+var new7 = $('p#p7').html().bold1().bold2().nl2br();
+$('p#p7').html(new7)
+</script>

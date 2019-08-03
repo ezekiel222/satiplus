@@ -1,0 +1,44 @@
+<div class="search">
+  <form class="form-inline md-form form-sm mt-0 mb-3" action="/articles/search" method="post">
+    <i class="fas fa-search mt-2" aria-hidden="true"></i>
+    <input class="form-control form-control-sm ml-3 w-75 mt-2" type="text" placeholder="Buscar"
+      aria-label="Search" name="search" value="{{sear}}">
+  </form>
+</div>
+<div class="col-12 col-md-12 pt-2 mb-3 mb-lg-4">
+  <!-- Search form -->
+<div class="row">
+  {{#each articles}}
+    <!--news box-->
+    <div class="col-12 col-md-4 pb-1 pt-2">
+        <div class="card border-0 rounded-0 text-white overflow zoom">
+            <div class="position-relative">
+                <!--thumbnail img-->
+                <div class="ratio_right-cover-2 image-wrapper overflow-hidden">
+                    <a href="/articles/{{this.id}}">
+                        <img class="img-fluid"
+                             src="{{this.photo}}"
+                             alt="Image description">
+                    </a>
+                </div>
+                <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
+                    <!-- category -->
+
+                    <!--title-->
+                    <a href="/articles/{{this.id}}">
+                        <h2 class="h5 text-white my-1">{{this.title}}</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of news box -->
+    {{else}}
+    <div class="empty">
+      <h2>No hemos encontrado resultados para "{{sear}}"</h2>
+      <p>Inténtelo con otras palabras</p>
+    </div>
+    {{/each}}
+</div>
+</div>
+                <!--End box news-->
