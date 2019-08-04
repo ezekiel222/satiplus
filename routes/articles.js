@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   const term = req.query;
   Articles.find(term).sort({updatedAt: 'desc'})
   .then(data =>{
-    res.render('articles/articles', {articles:data})
+    res.render('articles/articles', {articles:data, title:"Articulos"})
   })
   .catch(err => {
     res.json({
@@ -24,7 +24,7 @@ router.get('/search', function(req, res, next) {
   const term = req.query.data;
   Articles.find({$text: {$search:term}}).sort({updatedAt: 'desc'})
   .then(data =>{
-    res.render('articles/articles', {articles:data, sear:term})
+    res.render('articles/articles', {articles:data, sear:term, title:"Resultados para '"+term+"'"})
   })
   .catch(err => {
     res.json({
@@ -54,7 +54,7 @@ router.get('/:id', async (req, res) => {
   let articles1 = await Articles.find().sort({updatedAt: 'desc'}).limit(6)
   const id = req.params.id;
   Articles.findById(id).then(data => {
-    res.render('articles/show', {article:data, articles1:articles1})
+    res.render('articles/show', {article:data, articles1:articles1, title:data.title, description:data.description})
   });
 });
 
