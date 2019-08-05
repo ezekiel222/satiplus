@@ -33,6 +33,9 @@ mongoose.connect('mongodb+srv://satiplus:satiplus@satiplus-mcmof.mongodb.net/tes
   if (err) {
     throw err;
   }});
+
+mongoose.set('useFindAndModify', false);
+
 // error handler
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development

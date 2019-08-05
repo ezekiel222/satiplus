@@ -50,9 +50,9 @@
       <p id="p7">{{article.content7}}</p>
     </div>
     <br>
-    <p style="font-size:1rem;">
+    <p style="font-size:0.8rem;">
       <i>
-        <a href="{{article.fuente}}">{{article.fuente}}</a>
+        Fuente: <a href="{{article.fuente}}">{{article.fuente}}</a>
       </i>
     </p>
   </div>
@@ -119,20 +119,21 @@
 String.prototype.nl2br = function(){return this.replace(/\n/g, "<br />");};
 String.prototype.bold1 = function(){return this.replace(/[|]/g, "<b>");};
 String.prototype.bold2 = function(){return this.replace(/[*]/g, "</b>");};
-var neww = $('p#p').html().bold1().bold2().nl2br();
+String.prototype.bullet = function(){return this.replace(/[¬]/g, "&nbsp;&nbsp;&#8226;");};
+var neww = $('p#p').html().bold1().bold2().bullet().nl2br();
 $('p#p').html(neww)
-var new1 = $('p#p1').html().bold1().bold2().nl2br();
+var new1 = $('p#p1').html().bold1().bold2().bullet().nl2br();
 $('p#p1').html(new1)
-var new2 = $('p#p2').html().bold1().bold2().nl2br();
+var new2 = $('p#p2').html().bold1().bold2().bullet().nl2br();
 $('p#p2').html(new2)
-var new3 = $('p#p3').html().bold1().bold2().nl2br();
+var new3 = $('p#p3').html().bold1().bold2().bullet().nl2br();
 $('p#p3').html(new3)
-var new4 = $('p#p4').html().bold1().bold2().nl2br();
+var new4 = $('p#p4').html().bold1().bold2().bullet().nl2br();
 $('p#p4').html(new4)
-var new5 = $('p#p5').html().bold1().bold2().nl2br();
+var new5 = $('p#p5').html().bold1().bold2().bullet().nl2br();
 $('p#p5').html(new5)
-var new6 = $('p#p6').html().bold1().bold2().nl2br();
+var new6 = $('p#p6').html().bold1().bold2().bullet().nl2br();
 $('p#p6').html(new6)
-var new7 = $('p#p7').html().bold1().bold2().nl2br();
+var new7 = $('p#p7').html().bold1().bold2().bullet().nl2br();
 $('p#p7').html(new7)
 </script>

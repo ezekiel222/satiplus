@@ -18,13 +18,13 @@
 <div class="card border-0 rounded-0 text-light overflow zoom">
   <div class="postion-relative">
     <div class="ratio_left-cover-1 image-wrapper">
-      <img class="d-block w-100 overflow-hidden" src="{{this.photo}}" alt="First slide">
+      <a href="/articles/{{this.id}}"><img class="d-block w-100 overflow-hidden" src="{{this.photo}}" alt="First slide"></a>
     </div>
 
   </div>
 </div>
 <div class="position-absolute p-2 p-lg-3 b-0 w-100 bg-shadow">
-  <h2>{{this.title}}</h2>
+  <a href="/articles/{{this.id}}" style="color:inherit;"><h2>{{this.title}}</h2></a>
 </div>
 </div>
 {{/each}}

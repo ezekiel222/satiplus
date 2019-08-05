@@ -1,0 +1,121 @@
+<form class="new" action="/articles/edit/{{article.id}}" method="post">
+  <div class="article">
+    <h1>Articulo Nuevo</h1>
+    <label for="title">Título*</label>
+    <input type="text" name="title" value="{{article.title}}">
+    <div class="contenido" id="c1" style="display:block;">
+      <label for="subtitle">Subtitulo <b>(opcional)</b></label>
+      <label for="photo">Foto:</label>
+      <input type="text" name="photo" value="{{article.photo}}" placeholder="link de foto">
+      <label for="content">Contenido*</label>
+      <textarea name="content" rows="8" cols="80">{{article.content}}</textarea>
+      <h6 class="añadir">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c2">
+      <label for="subtitle1">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle1" value="{{article.subtitle1}}">
+      <label for="photo1">Foto:</label>
+      <input type="text" name="photo1" value="{{article.photo1}}" placeholder="link de foto">
+      <label for="content1">Contenido*</label>
+      <textarea name="content1" rows="8" cols="80">{{article.content1}}</textarea>
+      <h6 class="añadir1">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c3">
+      <label for="subtitle2">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle2" value="{{article.subtitle2}}">
+      <label for="photo2">Foto:</label>
+      <input type="text" name="photo2" value="{{article.photo2}}" placeholder="link de foto">
+      <label for="content2">Contenido*</label>
+      <textarea name="content2" rows="8" cols="80">{{article.content2}}</textarea>
+      <h6 class="añadir2">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c4">
+      <label for="subtitle3">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle3" value="{{article.subtitle3}}">
+      <label for="photo3">Foto:</label>
+      <input type="text" name="photo3" value="{{article.photo3}}" placeholder="link de foto">
+      <label for="content3">Contenido*</label>
+      <textarea name="content3" rows="8" cols="80">{{article.content3}}</textarea>
+      <h6 class="añadir3">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c5">
+      <label for="subtitle4">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle4" value="{{article.subtitle4}}">
+      <label for="photo4">Foto:</label>
+      <input type="text" name="photo4" value="{{article.photo4}}" placeholder="link de foto">
+      <label for="content4">Contenido*</label>
+      <textarea name="content4" rows="8" cols="80">{{article.content4}}</textarea>
+      <h6 class="añadir4">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c6">
+      <label for="subtitle5">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle5" value="{{article.subtitle5}}">
+      <label for="photo5">Foto:</label>
+      <input type="text" name="photo5" value="{{article.photo5}}" placeholder="link de foto">
+      <label for="content5">Contenido*</label>
+      <textarea name="content5" rows="8" cols="80">{{article.content5}}</textarea>
+      <h6 class="añadir5">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c7">
+      <label for="subtitle6">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle6" value="{{article.subtitle6}}">
+      <label for="photo6">Foto:</label>
+      <input type="text" name="photo6" value="{{article.photo6}}" placeholder="link de foto">
+      <label for="content6">Contenido*</label>
+      <textarea name="content6" rows="8" cols="80">{{article.content6}}</textarea>
+      <h6 class="añadir6">Añadir <b>FOTO/SUBTITULO</b></h6>
+    </div>
+    <div class="contenido" id="c8">
+      <label for="subtitl76">Subtitulo <b>(opcional)</b></label>
+      <input type="text" name="subtitle7" value="{{article.subtitle7}}">
+      <label for="photo7">Foto:</label>
+      <input type="text" name="photo7" value="{{article.photo7}}" placeholder="link de foto">
+      <label for="content7">Contenido*</label>
+      <textarea name="content7" rows="8" cols="80">{{article.content7}}</textarea>
+    </div>
+    <label for="fuente">Fuente <b>(opcional)</b>:</label>
+    <input type="text" name="fuente" value="{{article.fuente}}">
+    <input class="boton" type="submit" value="Publicar">
+  </div>
+</form>
+<script type="text/javascript">
+  $('.añadir').on('click', function(){
+    $('#c2').show('slow');
+    $(this).hide()
+  })
+  $('.añadir1').on('click', function(){
+    $('#c3').show('slow');
+    $(this).hide()
+  })
+  $('.añadir2').on('click', function(){
+    $('#c4').show('slow');
+    $(this).hide()
+  })
+  $('.añadir3').on('click', function(){
+    $('#c5').show('slow');
+    $(this).hide()
+  })
+  $('.añadir4').on('click', function(){
+    $('#c6').show('slow');
+    $(this).hide()
+  })
+  $('.añadir5').on('click', function(){
+    $('#c7').show('slow');
+    $(this).hide()
+  })
+  $('.añadir6').on('click', function(){
+    $('#c8').show('slow');
+    $(this).hide()
+  })
+</script>
+<script type="text/javascript">
+$('form.new input, form.new textarea').on('keyup', function() {
+
+   var empty = false;
+   $('form input, form textarea').each(function() {
+       if ($(this).val() == '') {
+           empty = true;
+       };
+   });
+ });
+</script>

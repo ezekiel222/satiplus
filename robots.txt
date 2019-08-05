@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow: /articles/h340
+Disallow: /articles/new
+Disallow: /articles/edit-article/
+Disallow: /articles/edit/
