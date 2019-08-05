@@ -50,13 +50,12 @@ router.get('/edit-article/:id', function(req,res){
   });
 });
 router.post('/edit/:id', function(req,res){
-  var new_data = req.body
-  const id = req.params.id
-  Articles.findByIdAndUpdate(id, {req.body}, {new:true})
-  .then(data => {
+  var new_data = req.body;
+  const id = req.params.id;
+  Articles.findByIdAndUpdate(id, {new_data}, {new:true}).then(data => {
     res.redirect('/articles/'+data.id)
-  })
-})
+  });
+});
 router.post('/new', function(req,res){
   var data = req.body
   var model = new Articles(data);
